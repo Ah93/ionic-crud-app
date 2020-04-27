@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/shopping-list"></ion-back-button>
+    </ion-buttons>
+
+    <ion-title class="ion-text-center">{{shoppingItem.itemName}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label>Item Name</ion-label>
+    <ion-input type="text" [(ngModel)]="shoppingItem.itemName"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Number</ion-label>
+    <ion-input type="number" [(ngModel)]="shoppingItem.itemNumber"></ion-input>
+  </ion-item>
+
+  <div class="ion-padding">
+    <ion-button expand="block" type="submit" class="ion-no-margin" (click)="updateItem(shoppingItem)">Edit Item</ion-button>
+  </div>
+
+</ion-content>
